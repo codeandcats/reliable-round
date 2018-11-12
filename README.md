@@ -1,5 +1,5 @@
 # reliable-round
-A rounding library for JavaScript that behaves predictably (unlike Math.round, Math.floor, Math.ceil).
+A reliable rounding library for JavaScript/TypeScript that actually behaves predictably (unlike Math.round).
 
 [![npm version](https://badge.fury.io/js/reliable-round.svg)](https://badge.fury.io/js/reliable-round)
 [![Build Status](https://travis-ci.org/codeandcats/reliable-round.svg?branch=master)](https://travis-ci.org/codeandcats/reliable-round)
@@ -12,10 +12,61 @@ npm install reliable-round --save
 ```
 
 ## Usage
+```typescript
+import { round } from 'reliable-round';
 
+console.log(round(1.005)); // Rounds to a whole integer, returning 1
 
-## Benefits
+console.log(round(1.005, 2)); // Rounds to 2 decimal places returning 1.01
+```
 
+## Why do I need this?
+Because JavaScript floating point math often results in quirky and unpredictable results.
+
+The classic JS WTF example is:
+
+```typescript
+console.log(0.1 + 0.2);
+
+// Evaluates to 0.30000000000000004
+```
+
+Maybe not what you expected right?
+
+As for rounding, lets say you need to round to 2 decimal places then you can create your own function like this:
+
+```typescript
+function roundToTwoDecimalPlaces(value: number): number {
+  return Math.round(value * 100) / 100;
+}
+
+console.log(roundToTwoDecimalPlaces(1.006));
+
+// Returns 1.01
+```
+
+At first glace, the output of the above function looks correct. But unfortunately its only correct some of the time!
+
+```typescript
+console.log(roundToTwoDecimalPlaces(1.005));
+
+// Whoops! Incorrectly returns 1
+// The correct answer is 1.01
+```
+
+If you deal with rounding many floats in JS you will inevitable encounter many quirky inconsistencies like this.
+
+[**reliable-round**](https://www.npmjs.com/package/reliable-round) to the rescue!
+
+```typescript
+import { round } from 'reliable-round';
+
+console.log(round(1.005, 2));
+
+// Correctly returns 1.01
+```
+
+While you will get predictable, reliable results using `reliable-round` be aware that it is at the expense of performance. Traditional methods of rounding that use the `Math` class are much faster but at the expense of accuracy. You need to decide what's more important for your use-case.
 
 ## Contributing
 Got an issue or a feature request? [Log it](https://github.com/codeandcats/reliable-round/issues).
