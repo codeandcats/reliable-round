@@ -1,6 +1,6 @@
 {
   "name": "reliable-round",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A rounding library for JavaScript that behaves predictably (unlike Math.round, Math.floor, Math.ceil).",
   "private": true,
   "main": "index.js",
