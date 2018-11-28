@@ -17,6 +17,20 @@ describe('./src/lib/math.ts', () => {
       expect(round(1.05, 0)).toEqual(1);
       expect(round(11607157.924999997, 2)).toEqual(11607157.93);
     });
+
+    it('should round negative numbers', () => {
+      expect(round(-1.05)).toEqual(-1);
+      expect(round(-1.4)).toEqual(-1);
+      expect(round(-1.5)).toEqual(-2);
+      expect(round(-99)).toEqual(-99);
+      expect(round(-99.9)).toEqual(-100);
+
+      expect(round(-0.005, 2)).toEqual(-0.01);
+      expect(round(-1.05, 2)).toEqual(-1.05);
+      expect(round(-1.05, 1)).toEqual(-1.1);
+      expect(round(-1.05, 0)).toEqual(-1);
+      expect(round(-11607157.924999997, 2)).toEqual(-11607157.93);
+    });
   });
 
   describe('numberToString', () => {

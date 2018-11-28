@@ -1,7 +1,8 @@
 export function round(value: number, decimalPlacesToRoundTo: number = 0) {
+  const isNegative = value < 0;
   const numberAsString = numberToString(value);
   const parts = numberAsString.split('.');
-  const integerPart = parts[0];
+  const integerPart = parts[0].replace('-', '');
   const decimalPart = parts[1] || '';
 
   if (decimalPart === '') {
@@ -30,7 +31,9 @@ export function round(value: number, decimalPlacesToRoundTo: number = 0) {
 
   allDigits.splice(integerDigits.length, 0, '.');
 
-  const result = parseFloat(allDigits.join(''));
+  const absoluteResult = parseFloat(allDigits.join(''));
+
+  const result = isNegative ? -absoluteResult : absoluteResult;
 
   return result;
 }
