@@ -3,7 +3,7 @@ A reliable rounding library for JavaScript/TypeScript that actually behaves pred
 
 [![npm version](https://badge.fury.io/js/reliable-round.svg)](https://badge.fury.io/js/reliable-round)
 [![Build Status](https://travis-ci.org/codeandcats/reliable-round.svg?branch=master)](https://travis-ci.org/codeandcats/reliable-round)
-[![Coverage Status](https://coveralls.io/repos/github/codeandcats/reliable-round/badge.svg?branch=master)](https://coveralls.io/github/codeandcats/reliable-round?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/codeandcats/reliable-round/badge.svg?branch=master)](https://coveralls.io/github/codeandcats/reliable-round?branch=master) [![Greenkeeper badge](https://badges.greenkeeper.io/codeandcats/reliable-round.svg)](https://greenkeeper.io/)
 
 
 ## Install
