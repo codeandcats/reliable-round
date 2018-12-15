@@ -42,7 +42,7 @@ function roundToTwoDecimalPlaces(value: number): number {
 
 console.log(roundToTwoDecimalPlaces(1.006));
 
-// Returns 1.01
+// Returns 1.01 - Correct!
 ```
 
 At first glace, the output of the above function looks correct. But unfortunately its only correct some of the time!
@@ -50,7 +50,8 @@ At first glace, the output of the above function looks correct. But unfortunatel
 ```typescript
 console.log(roundToTwoDecimalPlaces(1.005));
 
-// Whoops! Incorrectly returns 1
+// Returns 1 - Wrong!
+
 // The correct answer is 1.01
 ```
 
