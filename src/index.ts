@@ -13,10 +13,19 @@ export function round(value: number, decimalPlacesToRoundTo: number = 0) {
   const decimalDigits = [...decimalPart.split(''), '0'];
   const allDigits = [...integerDigits, ...decimalDigits];
 
+  const startIndex = Math.min(
+    integerDigits.length + decimalPlacesToRoundTo,
+    allDigits.length - 1
+  );
+
   const stopRoundingAtIndex = integerDigits.length - 1 + decimalPlacesToRoundTo;
 
+  if (startIndex < allDigits.length - 1) {
+    allDigits.splice(startIndex + 1, decimalDigits.length - 1);
+  }
+
   let carry = 0;
-  for (let index = allDigits.length - 1; index > -1; index--) {
+  for (let index = startIndex; index > -1; index--) {
     const digit = parseInt(allDigits[index], 10);
     let newDigit: number;
     if (index > stopRoundingAtIndex) {

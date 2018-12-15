@@ -11,11 +11,12 @@ describe('./src/lib/math.ts', () => {
     });
 
     it('should round to specified number of decimal places', () => {
+      expect(round(0.0049, 2)).toEqual(0.00);
       expect(round(0.005, 2)).toEqual(0.01);
       expect(round(1.05, 2)).toEqual(1.05);
       expect(round(1.05, 1)).toEqual(1.1);
       expect(round(1.05, 0)).toEqual(1);
-      expect(round(11607157.924999997, 2)).toEqual(11607157.93);
+      expect(round(0.995, 0)).toEqual(1);
     });
 
     it('should round negative numbers', () => {
@@ -29,7 +30,8 @@ describe('./src/lib/math.ts', () => {
       expect(round(-1.05, 2)).toEqual(-1.05);
       expect(round(-1.05, 1)).toEqual(-1.1);
       expect(round(-1.05, 0)).toEqual(-1);
-      expect(round(-11607157.924999997, 2)).toEqual(-11607157.93);
+      expect(round(-11607157.9249, 2)).toEqual(-11607157.92);
+      expect(round(-11607157.925, 2)).toEqual(-11607157.93);
     });
   });
 
