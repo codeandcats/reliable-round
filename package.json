@@ -10,13 +10,13 @@
     "commit": "commit",
     "prebuild": "npm run clean",
     "build": "tsc -p ./tsconfig.main.json",
+    "postbuild": "npm run package",
     "lint": "tslint -p ./tsconfig.json",
     "lint:fix": "npm run lint -- --fix",
-    "postbuild": "npm run package",
     "package": "ts-node --project ./tsconfig.package.json --files ./support/package.ts",
     "prerelease": "npm run package",
     "release": "git checkout master && git pull origin master && standard-version && ts-node ./support/updatePackageVersion.ts",
-    "ship-it": "git push --follow-tags origin master && cd ./dist && npm publish",
+    "ship": "git push --follow-tags origin master && cd ./dist && npm publish",
     "test": "jest"
   },
   "keywords": [
