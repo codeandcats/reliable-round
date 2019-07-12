@@ -44,7 +44,7 @@
     "@commitlint/prompt-cli": "^8.0.0",
     "@types/jest": "^24.0.15",
     "@types/node": "^12.0.10",
-    "coveralls": "^3.0.4",
+    "coveralls": "^3.0.5",
     "get-root-path": "^2.0.2",
     "husky": "^2.4.1",
     "jest": "^24.8.0",
