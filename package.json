@@ -43,7 +43,7 @@
     "@commitlint/config-conventional": "^8.3.4",
     "@commitlint/prompt-cli": "^8.3.4",
     "@types/jest": "^24.0.25",
-    "@types/node": "^12.12.21",
+    "@types/node": "^13.1.5",
     "coveralls": "^3.0.9",
     "get-root-path": "^2.0.2",
     "husky": "^3.1.0",
