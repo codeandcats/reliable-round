@@ -42,7 +42,7 @@
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
     "@commitlint/prompt-cli": "^8.3.5",
-    "@types/jest": "^24.9.1",
+    "@types/jest": "^25.1.2",
     "@types/node": "^12.12.21",
     "coveralls": "^3.0.9",
     "get-root-path": "^2.0.2",
