@@ -47,10 +47,10 @@
     "coveralls": "^3.0.9",
     "get-root-path": "^2.0.2",
     "husky": "^3.1.0",
-    "jest": "^24.9.0",
+    "jest": "^25.1.0",
     "rimraf": "^3.0.2",
     "standard-version": "^7.1.0",
-    "ts-jest": "^24.3.0",
+    "ts-jest": "^25.2.1",
     "ts-node": "^8.6.2",
     "tslint": "^6.0.0",
     "typescript": "^3.8.3"
