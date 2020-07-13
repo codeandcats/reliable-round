@@ -40,7 +40,7 @@
   },
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
-    "@commitlint/config-conventional": "^8.3.4",
+    "@commitlint/config-conventional": "^9.1.1",
     "@commitlint/prompt-cli": "^8.3.5",
     "@types/jest": "^25.2.3",
     "@types/node": "^13.13.5",
