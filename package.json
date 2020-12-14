@@ -46,7 +46,7 @@
     "@types/node": "^13.13.5",
     "coveralls": "^3.1.0",
     "get-root-path": "^2.0.2",
-    "husky": "^4.3.5",
+    "husky": "^4.3.6",
     "jest": "^25.5.4",
     "rimraf": "^3.0.2",
     "standard-version": "^7.1.0",
